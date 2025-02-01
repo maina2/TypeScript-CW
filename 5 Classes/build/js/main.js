@@ -1,15 +1,15 @@
 "use strict";
-class Car {
-    constructor(name, brand, model, color, driven) {
-        this.name = name;
-        this.brand = brand;
-        this.model = model;
-        this.color = color;
-        this.driven = driven;
-    }
-    revv() {
-        console.log(`This is the ${this.model}, ${this.name} ${this.brand}. A ${this.color} ${this.driven}kms mileage monster`);
-    }
+// class Car{
+function createStudent(firstname, lastname, age) {
+    return {
+        firstname,
+        lastname,
+        age,
+        greet() {
+            console.log(` Hello, my name is ${this.firstname} ${this.lastname}`);
+        }
+    };
 }
-const car1 = new Car("Mercedes", "GLe", 2022, "Blue", 3000);
-car1.revv();
+const Simon = createStudent("Simon", "Chanzu", 23);
+console.log(Simon);
+Simon.greet();
